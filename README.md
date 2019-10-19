@@ -60,6 +60,19 @@ El programa global enviado no debe depender de un estado, sino que debe tener un
 
 Recomendación: [este curso](https://www.coursera.org/learn/progfun1) sobre `functional programming`.
 
+# Spark
+
+Herramienta de ETL para grandes cantidades de datos. Framework the computación mediante clúster. 100 veces más rápido que MapReduce (en aplicaciones donde el hecho de que se use memoria en lugar de disco, se nota). El original es en Scala, pero está pyspark, que es un port. 
+
+Cuando se trabaja con spark es fundamental saber que estamos `cambiando el paradigma` a la hora de resover el problema. Debemos dejar de pensar en secuencia, para pensar en distribuido. 
+
+Un ejemplo de aplcicación: tenemos una tabla con todos los datos de facturación, y hacemos que cada nodo se encargue de un periodo de tiempo. 
+
+Hay componentes por encima de Spark para ayudar:
+* Spark SQL: para trabajar sobre él usando SQL. 
+* Spark Streaming: para trabajar con datos en streaming.
+& MLig: para machine learning. Basado en las librerías de python. 
+
 
 
 
