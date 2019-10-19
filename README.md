@@ -17,7 +17,7 @@ Si dos personas están trabajando en el mismo clúster, podría haber dos progra
 
 Lo inventó Google para sus búsquedas. 
 
-En un clúster hadoop, las cosas son un poco distintas. Cada nodo es responsable de su storage (físicamente no tiene por qué estar en ese nodo, nosotros podemos abstraernos de eso). 
+En un clúster hadoop, las cosas son un poco distintas. Cada nodo es responsable de su storage (físicamente no tiene por qué estar en ese nodo, nosotros podemos abstraernos de eso). El paradigma es que todo se ha haga lo más localmente posibie, por lo que podemos ahorrarnos en red. 
 
 ![](https://user-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_limit,fl_lossy,h_9000,w_1200,f_auto,q_auto/1483830/612864_940846.png)
 
@@ -29,7 +29,10 @@ MapReduce era como se llamaba antes Hadoop.
 
 Hadoop funciona con storage, spark hace lo mismo que Hadoop, pero lo hace en RAM. Por tanto, Spark vuela comparado con Hadoop (hasta 100 veces).
 
-### Nos importan los datos, y no nos gusta perderos. Necesitamos duplicidad. 
+## Nos importan los datos, y no nos gusta perderos. Necesitamos duplicidad. 
+
+Hadopp está diseñado sabiendo que va a fallar. 
+
 En Storage tradicional, se usaban sistemas RAID más complejos.
 
 Lo que hace hadoop es decir: ok, si el nodo tiene 1 tb de storage, en lugar de eso, le decimos que tiene 500 gb y los otros 500 los usamos para duplicar información (de otro nodo, claro, no vas a hacerte copia de los datos en el mismo nodo). 
@@ -37,6 +40,17 @@ Lo que hace hadoop es decir: ok, si el nodo tiene 1 tb de storage, en lugar de e
 Esto sería para `factor de duplicidad` = 2. Para 3, tendríamos sólo un tercio de nuestro disco duro para meter nuestros datos. El resto, para duplicar datos de otros nodos. 
 
 Todo esto orquedtado por el máster. Veremos cuando hagamos cosas con hadoop que el fichero tiene dos tamaños: 100 y 300, por ejemplo. Ocupa 100 en un nodo pero 300 en total porque el factor de duplicidad es 3. 
+
+## Qué es MapReduce
+
+`Partición`: una división adicional (lógica) dentro de un nodo. Es una tarea, con su propia memoria reservada, etc. 
+
+`Map`: es una transformación de una cosa a otra. 
+`Shuffle`: la operación más costosa en distribución. Que cada nodo se comunique con el otro. Por ejemplo, para una ordenación es necesario. 
+
+![Shuffle](https://www.analyticsvidhya.com/blog/wp-content/uploads/2014/05/mapreduce_eg.png)
+
+`Reduce`: 
 
 
 
