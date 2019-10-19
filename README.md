@@ -46,7 +46,7 @@ Todo esto orquedtado por el máster. Veremos cuando hagamos cosas con hadoop que
 `Partición`: una división adicional (lógica) dentro de un nodo. Es una tarea, con su propia memoria reservada, etc. 
 
 `Map`: es una transformación de una cosa a otra. 
-`Shuffle`: la operación más costosa en distribución. Que cada nodo se comunique con el otro. Por ejemplo, para una ordenación es necesario. 
+`Shuffle`: la operación más costosa en distribución. Que cada nodo se comunique con el otro. Por ejemplo, para una ordenación es necesario. Se intenta evitar lo más posible, porque es costosa y no resiliente. 
 
 ![Shuffle](https://www.analyticsvidhya.com/blog/wp-content/uploads/2014/05/mapreduce_eg.png)
 
@@ -60,8 +60,19 @@ El programa global enviado no debe depender de un estado, sino que debe tener un
 
 Recomendación: [este curso](https://www.coursera.org/learn/progfun1) sobre `functional programming`.
 
+# Spark
 
+Herramienta de ETL para grandes cantidades de datos. Framework the computación mediante clúster. 100 veces más rápido que MapReduce (en aplicaciones donde el hecho de que se use memoria en lugar de disco, se nota). El original es en Scala, pero está pyspark, que es un port. 
 
+Cuando se trabaja con spark es fundamental saber que estamos `cambiando el paradigma` a la hora de resover el problema. Debemos dejar de pensar en secuencia, para pensar en distribuido. 
 
+Un ejemplo de aplcicación: tenemos una tabla con todos los datos de facturación, y hacemos que cada nodo se encargue de un periodo de tiempo. 
 
+Hay componentes por encima de Spark para ayudar:
+* Spark SQL: para trabajar sobre él usando SQL. 
+* Spark Streaming: para trabajar con datos en streaming.
+& MLig: para machine learning. Basado en las librerías de python. 
 
+La abstracción bíasca de Spark es el Resilient Distributed Dataset (RDD). Son como dataframes pero distintosl Son immnuitables, almacenan sólo las transformaciones, no los datos en sí. Permiten al usuario elegir la partición. Normalmente se usan dataframes normales, porque Spark tiene herramientas que te o
+
+Hasta hace poco, Scala le daba mil vueltas a Python para Spark. Hoy ha mejorado brutalmente aunque aún se nota un poco.  
