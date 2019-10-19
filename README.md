@@ -1,6 +1,17 @@
 # Big Data con Spark
 
-## Instalación
+## Instalación que funcionó
+
+* https://www.sicara.ai/blog/2017-05-02-get-started-pyspark-jupyter-notebook-3-minutes (usar opción 1).
+
+Encontré problemas solucionados por:
+
+https://stackoverflow.com/a/47731444
+https://stackoverflow.com/a/47731444  (ojo, aquí estoy diciendo que voy a usar java 8 en todo mi ordenador, porque spark es no compatible con Java 11. 
+
+**OJO: Para lanzar los  notebooks, hay que escribir `pyspark`, no `jupyter notebook`**
+
+## Instalación que NO me funcionó
 
 * Tener instalado `Anaconda`.
 * Instalarlo mediante `pip`
@@ -57,7 +68,17 @@ Si dos personas están trabajando en el mismo clúster, podría haber dos progra
 
 ## Hadoop Cluster
 
-En un clúster hadoop, las cosas son un poco distintas. Cada nodo es responsable de su storage. 
+Lo inventó Google para sus búsquedas. 
+
+En un clúster hadoop, las cosas son un poco distintas. Cada nodo es responsable de su storage (físicamente no tiene por qué estar en ese nodo, nosotros podemos abstraernos de eso). 
 
 ![](https://user-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_limit,fl_lossy,h_9000,w_1200,f_auto,q_auto/1483830/612864_940846.png)
+
+Además, en un Hadoop Clúster, tenemos un diagrama, un grafo, de lo que tenemos que hacer. En los tradicionales, donde no lo teníamos, si había un error, no éramos capaces de recuperarnos. Aquí sí. 
+
+MapReduce era como se llamaba antes Hadoop. 
+
+
+
+
 
