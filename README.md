@@ -52,7 +52,11 @@ Todo esto orquedtado por el máster. Veremos cuando hagamos cosas con hadoop que
 
 `Reduce`: a partir de los elementos transformados, tenemos que sacar un resultado que suele ser una agregación. Eso es el reduce. 
 
-Como todo esá distribuido, tenemos que evitar el uso de datos mutables. Tenemos que tendre a un enfoque funcional. 
+Como todo esá distribuido, tenemos que evitar el uso de datos mutables. Tenemos que tendre a un enfoque funcional. Es decir
+
+```
+El programa global enviado no debe depender de un estado, sino que debe tener un enfoque funcional. 
+```
 
 
 
