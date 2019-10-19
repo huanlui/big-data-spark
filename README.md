@@ -73,6 +73,6 @@ Hay componentes por encima de Spark para ayudar:
 * Spark Streaming: para trabajar con datos en streaming.
 & MLig: para machine learning. Basado en las librerías de python. 
 
-La abstracción bíasca de Spark es el Resilient Distributed Dataset (RDD). Son immnuitables, almacenan sólo las transformaciones, no los datos en sí. 
+La abstracción bíasca de Spark es el Resilient Distributed Dataset (RDD). Son como dataframes pero distintosl Son immnuitables, almacenan sólo las transformaciones, no los datos en sí. Permiten al usuario elegir la partición. Normalmente se usan dataframes normales, porque Spark tiene herramientas que te o
 
-
+Hasta hace poco, Scala le daba mil vueltas a Python para Spark. Hoy ha mejorado brutalmente aunque aún se nota un poco.  
