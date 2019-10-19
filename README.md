@@ -58,7 +58,7 @@ Como todo esá distribuido, tenemos que evitar el uso de datos mutables. Tenemos
 El programa global enviado no debe depender de un estado, sino que debe tener un enfoque funcional. 
 ```
 
-Recomendación: curso en cursera llamado `functional programming`.
+Recomendación: [este curso](https://www.coursera.org/learn/progfun1) sobre `functional programming`.
 
 
 
