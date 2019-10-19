@@ -27,7 +27,18 @@ MapReduce era como se llamaba antes Hadoop.
 
 ## Hadoop vs Spark
 
-Hadoop funciona con storage, spark hace lo mismo que Hadoop, pero lo hace en RAM. Por tanto, Spark vuela comparado con Hadoop (hasta 100 veces)
+Hadoop funciona con storage, spark hace lo mismo que Hadoop, pero lo hace en RAM. Por tanto, Spark vuela comparado con Hadoop (hasta 100 veces).
+
+### Nos importan los datos, y no nos gusta perderos. Necesitamos duplicidad. 
+En Storage tradicional, se usaban sistemas RAID más complejos.
+
+Lo que hace hadoop es decir: ok, si el nodo tiene 1 tb de storage, en lugar de eso, le decimos que tiene 500 gb y los otros 500 los usamos para duplicar información (de otro nodo, claro, no vas a hacerte copia de los datos en el mismo nodo). 
+
+Esto sería para `factor de duplicidad` = 2. Para 3, tendríamos sólo un tercio de nuestro disco duro para meter nuestros datos. El resto, para duplicar datos de otros nodos. 
+
+Todo esto orquedtado por el máster. Veremos cuando hagamos cosas con hadoop que el fichero tiene dos tamaños: 100 y 300, por ejemplo. Ocupa 100 en un nodo pero 300 en total porque el factor de duplicidad es 3. 
+
+
 
 
 
