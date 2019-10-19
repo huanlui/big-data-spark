@@ -10,7 +10,7 @@ https://stackoverflow.com/a/47731444  (ojo, aquí estoy diciendo que voy a usar 
 
 **OJO: Para lanzar los  notebooks, hay que escribir `pyspark`, no `jupyter notebook`**
 
-Para comprobar que funciona, abrir el notebook [pi.md](./pi.md)
+Para comprobar que funciona, abrir el notebook [pi.ipynb](./pi.ipynb)
 
 ## Instalación que NO me funcionó
 
