@@ -46,7 +46,7 @@ Todo esto orquedtado por el máster. Veremos cuando hagamos cosas con hadoop que
 `Partición`: una división adicional (lógica) dentro de un nodo. Es una tarea, con su propia memoria reservada, etc. 
 
 `Map`: es una transformación de una cosa a otra. 
-`Shuffle`: la operación más costosa en distribución. Que cada nodo se comunique con el otro. Por ejemplo, para una ordenación es necesario. 
+`Shuffle`: la operación más costosa en distribución. Que cada nodo se comunique con el otro. Por ejemplo, para una ordenación es necesario. Se intenta evitar lo más posible, porque es costosa y no resiliente. 
 
 ![Shuffle](https://www.analyticsvidhya.com/blog/wp-content/uploads/2014/05/mapreduce_eg.png)
 
@@ -73,8 +73,6 @@ Hay componentes por encima de Spark para ayudar:
 * Spark Streaming: para trabajar con datos en streaming.
 & MLig: para machine learning. Basado en las librerías de python. 
 
-
-
-
+La abstracción bíasca de Spark es el Resilient Distributed Dataset (RDD). Son immnuitables, almacenan sólo las transformaciones, no los datos en sí. 
 
 
