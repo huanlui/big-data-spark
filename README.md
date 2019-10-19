@@ -21,9 +21,14 @@ En un clúster hadoop, las cosas son un poco distintas. Cada nodo es responsable
 
 ![](https://user-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_limit,fl_lossy,h_9000,w_1200,f_auto,q_auto/1483830/612864_940846.png)
 
-Además, en un Hadoop Clúster, tenemos un diagrama, un grafo, de lo que tenemos que hacer. En los tradicionales, donde no lo teníamos, si había un error, no éramos capaces de recuperarnos. Aquí sí. 
+Además, en un Hadoop Clúster, tenemos un diagrama, un grafo, de lo que tenemos que hacer. En los tradicionales, donde no lo teníamos, si había un error, no éramos capaces de recuperarnos. Aquí sí. Así, tenemos un grafo representando cada mini tarea. Si falla una, soomos capaces de saber por dónde nos quedamos, rpetirla en otro nodo y seguir con las siguientes. 
 
 MapReduce era como se llamaba antes Hadoop. 
+
+## Hadoop vs Spark
+
+Hadoop funciona con storage, spark hace lo mismo que Hadoop, pero lo hace en RAM. Por tanto, Spark vuela comparado con Hadoop (hasta 100 veces)
+
 
 
 
