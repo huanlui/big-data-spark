@@ -78,3 +78,5 @@ Hay componentes por encima de Spark para ayudar:
 La abstracción bíasca de Spark es el Resilient Distributed Dataset (RDD). Son como dataframes pero distintosl Son immnuitables, almacenan sólo las transformaciones, no los datos en sí. Permiten al usuario elegir la partición. Normalmente se usan dataframes normales, porque Spark tiene herramientas que te o
 
 Hasta hace poco, Scala le daba mil vueltas a Python para Spark. Hoy ha mejorado brutalmente aunque aún se nota un poco.  
+
+Ver https://www.google.com/search?q=the+unreasonable+effectiveness+of+data&oq=the+unreasonab&aqs=chrome.2.69i57j0l4j69i60l2j69i61.5844j0j7&sourceid=chrome&ie=UTF-8
