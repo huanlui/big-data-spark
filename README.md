@@ -2,6 +2,8 @@
 
 Ver [Instrucciones de instalación](/instalacion.md)
 
+Una vez instalado, hay que lanzarlo usando el comando`pyspark` en lugar de `jupyter notebook`` 
+
 ## Clústers:
 
 - Si tenemos muchos esclavos y le llega todo de golpe al master, peude tener problemas de procesameinto. Normalemten además el master no suele ser un ordenador mejor que los esclavos. 
